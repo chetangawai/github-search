@@ -1,18 +1,7 @@
 import React from 'react';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import Pagination from '@mui/material/Pagination';
-import PaginationItem from '@mui/material/PaginationItem';
-import Stack from '@mui/material/Stack';
+import { Pagination, Stack } from '@mui/material';
 
-const SearchPagination = ({
-  items,
-  totalCount,
-  numberOfPages,
-  pageNo,
-  pageNoChangeHandler,
-}) => {
-
+const SearchPagination = ({ numberOfPages, pageNo, pageNoChangeHandler }) => {
   const handleChange = (event, page) => {
     pageNoChangeHandler(page);
   };
@@ -21,13 +10,11 @@ const SearchPagination = ({
     <Stack spacing={2}>
       <Pagination
         count={numberOfPages}
+        size="large"
+        page={pageNo}
+        variant="outlined"
+        shape="rounded"
         onChange={handleChange}
-        renderItem={(item) => (
-          <PaginationItem
-            components={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}
-            {...item}
-          />
-        )}
       />
     </Stack>
   );
