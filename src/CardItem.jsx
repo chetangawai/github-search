@@ -4,7 +4,7 @@ import { Typography, Avatar, Grid, Divider, Link } from '@mui/material';
 const CardItem = ({ item }) => {
   return (
     <React.Fragment>
-      <Link href={item.url} underline="none" target="_blank" rel="noopener">
+      <Link href={item.html_url} underline="none" target="_blank" rel="noopener">
         <Grid container spacing={2} style={{ padding: 10 }}>
           <Grid item xs={2}>
             <Avatar
