@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import './App.css';
 import Search from './Search';
 import SearchResult from '../search_result/SearchResult';
-import { PER_PAGE } from 'constants';
-import { getGithubUsers } from 'services/GithubSearch';
+import { PER_PAGE } from '@/constants';
+import { getGithubUsers } from '@/services/GithubSearch';
 
 
 function App() {
